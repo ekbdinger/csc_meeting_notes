@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CSC Meeting Notes feature.
+ */
+
+include_once 'csc_meeting_notes.features.inc';
