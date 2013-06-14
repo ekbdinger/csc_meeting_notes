@@ -62,17 +62,13 @@ function csc_meeting_notes_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: File Attachments */
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
   /* Field: Content: Notes */
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['id'] = 'field_csc_meeting_notes_1';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['table'] = 'field_data_field_csc_meeting_notes';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['field'] = 'field_csc_meeting_notes';
-  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['label'] = 'Summary';
+  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['label'] = '';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['settings'] = array(
     'trim_length' => '600',
@@ -81,6 +77,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meeting_notes']['id'] = 'field_csc_meeting_notes';
   $handler->display->display_options['fields']['field_csc_meeting_notes']['table'] = 'field_data_field_csc_meeting_notes';
   $handler->display->display_options['fields']['field_csc_meeting_notes']['field'] = 'field_csc_meeting_notes';
+  $handler->display->display_options['fields']['field_csc_meeting_notes']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meeting_notes']['alter']['alter_text'] = TRUE;
   /* Field: Read More link */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -105,6 +102,13 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>&nbsp;</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: File Attachments */
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

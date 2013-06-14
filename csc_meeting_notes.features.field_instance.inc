@@ -59,10 +59,10 @@ function csc_meeting_notes_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'csc_service_alert',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -114,7 +114,7 @@ function csc_meeting_notes_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
