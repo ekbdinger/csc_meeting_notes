@@ -28,6 +28,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -62,10 +63,11 @@ function csc_meeting_notes_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Notes */
+  /* Field: Notes:  Summary */
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['id'] = 'field_csc_meeting_notes_1';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['table'] = 'field_data_field_csc_meeting_notes';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['field'] = 'field_csc_meeting_notes';
+  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['ui_name'] = 'Notes:  Summary';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['label'] = '';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_colon'] = FALSE;
@@ -73,12 +75,6 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Notes */
-  $handler->display->display_options['fields']['field_csc_meeting_notes']['id'] = 'field_csc_meeting_notes';
-  $handler->display->display_options['fields']['field_csc_meeting_notes']['table'] = 'field_data_field_csc_meeting_notes';
-  $handler->display->display_options['fields']['field_csc_meeting_notes']['field'] = 'field_csc_meeting_notes';
-  $handler->display->display_options['fields']['field_csc_meeting_notes']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_csc_meeting_notes']['alter']['alter_text'] = TRUE;
   /* Field: Read More link */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -127,6 +123,63 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'csc_meeting_notes' => 'csc_meeting_notes',
+  );
+  /* Filter criterion: Search: Search Terms */
+  $handler->display->display_options['filters']['keys']['id'] = 'keys';
+  $handler->display->display_options['filters']['keys']['table'] = 'search_index';
+  $handler->display->display_options['filters']['keys']['field'] = 'keys';
+  $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
+  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search Terms';
+  $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
+  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
+  $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
+    2 => '2',
+    3 => 0,
+    1 => 0,
+    23 => 0,
+    21 => 0,
+    36 => 0,
+    43 => 0,
+    39 => 0,
+    25 => 0,
+    46 => 0,
+    9 => 0,
+    31 => 0,
+    19 => 0,
+    14 => 0,
+    15 => 0,
+    13 => 0,
+    5 => 0,
+    22 => 0,
+    12 => 0,
+    30 => 0,
+    38 => 0,
+    11 => 0,
+    42 => 0,
+    40 => 0,
+    29 => 0,
+    32 => 0,
+    35 => 0,
+    41 => 0,
+    28 => 0,
+    16 => 0,
+    45 => 0,
+    27 => 0,
+    24 => 0,
+    37 => 0,
+    26 => 0,
+    34 => 0,
+    18 => 0,
+    17 => 0,
+    33 => 0,
+    44 => 0,
+    20 => 0,
+    7 => 0,
+    8 => 0,
+    47 => 0,
+    48 => 0,
+    49 => 0,
   );
 
   /* Display: Page */
