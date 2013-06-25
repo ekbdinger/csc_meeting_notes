@@ -63,11 +63,11 @@ function csc_meeting_notes_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Notes:  Summary */
+  /* Field: Notes:  Summary only displays on View */
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['id'] = 'field_csc_meeting_notes_1';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['table'] = 'field_data_field_csc_meeting_notes';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['field'] = 'field_csc_meeting_notes';
-  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['ui_name'] = 'Notes:  Summary';
+  $handler->display->display_options['fields']['field_csc_meeting_notes_1']['ui_name'] = 'Notes:  Summary only displays on View';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['label'] = '';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['element_label_colon'] = FALSE;
