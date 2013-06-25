@@ -98,11 +98,10 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>&nbsp;</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: File Attachments */
+  /* Field: Content: Attachments */
   $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['label'] = 'Attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
@@ -131,7 +130,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['filters']['keys']['field'] = 'keys';
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search Terms';
+  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search Meeting Notes';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(

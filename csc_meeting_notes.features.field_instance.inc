@@ -32,7 +32,7 @@ function csc_meeting_notes_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_csc_meet_attachments',
-    'label' => 'File Attachments',
+    'label' => 'Attachments',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -180,8 +180,8 @@ function csc_meeting_notes_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Attachments');
   t('Date');
-  t('File Attachments');
   t('Notes');
 
   return $field_instances;
