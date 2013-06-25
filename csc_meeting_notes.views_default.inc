@@ -75,6 +75,22 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meeting_notes_1']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Attachments */
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
+  /* Field: Space */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Space';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<p>&nbsp;</p>
+';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Field: Read More link */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -96,15 +112,10 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Space below each post';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>&nbsp;</p>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Attachments */
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
