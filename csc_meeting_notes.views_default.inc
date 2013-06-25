@@ -24,7 +24,10 @@ function csc_meeting_notes_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'CSC Meeting Notes';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -83,6 +86,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
