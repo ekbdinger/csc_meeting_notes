@@ -57,7 +57,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meeting_date']['alter']['text'] = '<span class="submitted">[field_csc_meeting_date]</span>';
   $handler->display->display_options['fields']['field_csc_meeting_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_csc_meeting_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'csc_service_alert',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -102,6 +102,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
+  $handler->display->display_options['fields']['field_csc_meet_attachments']['label'] = 'Attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
@@ -184,7 +185,8 @@ function csc_meeting_notes_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'csc-meeting-notes';
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'csc/meeting-notes';
   $export['csc_meeting_notes'] = $view;
 
   return $export;
