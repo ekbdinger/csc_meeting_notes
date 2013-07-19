@@ -88,7 +88,6 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['field_csc_meet_attachments']['id'] = 'field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['table'] = 'field_data_field_csc_meet_attachments';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['field'] = 'field_csc_meet_attachments';
-  $handler->display->display_options['fields']['field_csc_meet_attachments']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_csc_meet_attachments']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_csc_meet_attachments']['click_sort_column'] = 'fid';
@@ -107,6 +106,7 @@ function csc_meeting_notes_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['ui_name'] = 'Read More link';
   $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="links">
 » 
